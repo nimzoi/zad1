@@ -71,11 +71,11 @@ public class Program
         }
 
         int max = numbers[0];
-        foreach (int num in numbers)
+        foreach (int f in numbers)
         {
-            if (num > max)
+            if (f > max)
             {
-                max = num;
+                max = f;
             }
         }
 
