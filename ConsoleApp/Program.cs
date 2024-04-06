@@ -1,15 +1,17 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
 
-class Program
+public class Program
 {
     static void Main(string[] args)
     {
         PrintHeart();
         Console.WriteLine();
-        PrintTree(5); // Adjust the parameter to change the size of the tree
+        PrintTree(5); 
         Console.WriteLine();
-        PrintLadder(5); // Adjust the parameter to change the size of the ladder
+        PrintLadder(5); 
+        Console.WriteLine();
+        CalculateAverage([1,10,9,5]); 
     }
 
     static void PrintHeart()
@@ -41,5 +43,21 @@ class Program
             Console.WriteLine("|   |");
             Console.WriteLine("|___|");
         }
+    }
+    
+    static void CalculateAverage(int[] numbers)
+    {
+        if (numbers == null || numbers.Length == 0)
+        {
+            throw new ArgumentException("Array is empty or null");
+        }
+
+        int sum = 0;
+        foreach (int num in numbers)
+        {
+            sum += num;
+        }
+
+        Console.WriteLine((double)sum / numbers.Length);
     }
 }
