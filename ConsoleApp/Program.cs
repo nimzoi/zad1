@@ -55,9 +55,9 @@ public class Program
         }
 
         int sum = 0;
-        foreach (int num in numbers)
+        foreach (int k in numbers)
         {
-            sum += num;
+            sum += k;
         }
 
         Console.WriteLine("Average: " + (double)sum / numbers.Length);
@@ -71,11 +71,11 @@ public class Program
         }
 
         int max = numbers[0];
-        foreach (int num in numbers)
+        foreach (int i in numbers)
         {
-            if (num > max)
+            if (i > max)
             {
-                max = num;
+                max = i;
             }
         }
 
