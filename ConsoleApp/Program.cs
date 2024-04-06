@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System;
+﻿using System;
 
 public class Program
 {
@@ -11,7 +10,10 @@ public class Program
         Console.WriteLine();
         PrintLadder(5); 
         Console.WriteLine();
-        CalculateAverage([1,10,9,5]); 
+        CalculateAverage(new int[] { 1, 10, 9, 5 });
+        Console.WriteLine();
+        int[] numbers = { 3, 7, 2, 9, 4 };
+        Console.WriteLine("Maximum value: " + FindMax(numbers));
     }
 
     static void PrintHeart()
@@ -58,6 +60,25 @@ public class Program
             sum += num;
         }
 
-        Console.WriteLine((double)sum / numbers.Length);
+        Console.WriteLine("Average: " + (double)sum / numbers.Length);
+    }
+    
+    static int FindMax(int[] numbers)
+    {
+        if (numbers == null || numbers.Length == 0)
+        {
+            throw new ArgumentException("Array is empty or null");
+        }
+
+        int max = numbers[0];
+        foreach (int num in numbers)
+        {
+            if (num > max)
+            {
+                max = num;
+            }
+        }
+
+        return max;
     }
 }
