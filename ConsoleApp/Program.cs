@@ -1,7 +1,4 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
-using System;
-
 using System;
 
 class Program
@@ -11,6 +8,8 @@ class Program
         PrintHeart();
         Console.WriteLine();
         PrintTree(5); // Adjust the parameter to change the size of the tree
+        Console.WriteLine();
+        PrintLadder(5); // Adjust the parameter to change the size of the ladder
     }
 
     static void PrintHeart()
@@ -33,5 +32,14 @@ class Program
         }
 
         Console.WriteLine(new string(' ', height - 1) + "|");
+    }
+
+    static void PrintLadder(int steps)
+    {
+        for (int i = 0; i < steps; i++)
+        {
+            Console.WriteLine("|   |");
+            Console.WriteLine("|___|");
+        }
     }
 }
